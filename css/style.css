@@ -100,13 +100,13 @@ h6 {
 }
 
 .menu__link-active {
-  color: rgb(40, 108, 255);
+  color: #ffffff;
   text-shadow: 0 0 3px rgba(155, 155, 155, 0.6);
 }
 
 .menu__link:hover,
 .menu__link:active {
-  color: rgb(141, 140, 140);
+  color: #e1af4f;
   -webkit-transform: scale(1.04);
       -ms-transform: scale(1.04);
           transform: scale(1.04);
@@ -127,6 +127,7 @@ h6 {
 
 .footer__link {
   padding: 5px;
+  position: relative;
 }
 
 .footer__link > a {
@@ -148,50 +149,51 @@ h6 {
   fill: #ddd;
 }
 
-.footer__link {
-  position: relative;
-}
-
 .footer__mail-tooltip {
   position: absolute;
-  bottom: 95px;
-  left: 0px;
-  padding: 20px;
+  bottom: 90px;
+  left: -2.5vw;
+  left: -125%;
+  padding: 15px;
   font-size: 0;
   -webkit-transform: scale(0) translate(-40px, 0);
       -ms-transform: scale(0) translate(-40px, 0);
           transform: scale(0) translate(-40px, 0);
+  color: #fff;
 }
 
 .footer__mail-tooltip.active-tooltip {
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
   font-size: 18px;
   line-height: 1.2;
-  min-width: 330px;
-  color: #eee;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(80, 80, 80)), color-stop(rgb(132, 132, 132)), to(rgb(90, 90, 90)));
-  background: -o-linear-gradient(left, rgb(80, 80, 80), rgb(132, 132, 132), rgb(90, 90, 90));
-  background: linear-gradient(to right, rgb(80, 80, 80), rgb(132, 132, 132), rgb(90, 90, 90));
+  text-align: center;
+  width: 326px;
+  background: -webkit-gradient(linear, left top, right top, from(#9DB5E3), color-stop(#9FBBDE), to(#9DD2F0));
+  background: -o-linear-gradient(left, #9DB5E3, #9FBBDE, #9DD2F0);
+  background: linear-gradient(to right, #9DB5E3, #9FBBDE, #9DD2F0);
   border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 40px -5px honeydew;
+          box-shadow: 5px 5px 40px -5px honeydew;
   -webkit-transform: scale(1) translate(-40px, 0);
       -ms-transform: scale(1) translate(-40px, 0);
           transform: scale(1) translate(-40px, 0);
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .footer__mail-tooltip.active-tooltip::after {
   position: absolute;
   bottom: -20px;
-  left: 60px;
+  left: 45%;
   content: "";
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 20px solid rgb(80, 80, 80);
+  border-top: 20px solid #91b3d6;
 }
 
 body {
   font-family: "Heebo", "Areal", sans-serif;
+  background-color: #7eb6f7;
 }
 
 .wrapper {
@@ -232,6 +234,16 @@ body {
 @media (min-width: 858px) {
   .menu__link {
     font-size: calc(19.6px + 0.4 * ((100vw - 767px) / 91));
+  }
+}
+
+@media (max-width: 858px) {
+  .footer__mail-tooltip {
+    left: calc(-10.3vw + 7.8 * ((100vw - 767px) / 91));
+  }
+
+  .footer__mail-tooltip.active-tooltip {
+    width: calc(319px + 7 * ((100vw - 767px) / 91));
   }
 }
 
@@ -318,6 +330,7 @@ body {
     transition: right 0.6s ease-out 0s, box-shadow 1.3s ease 0s, -webkit-box-shadow 1.3s ease 0s;
     padding: 50px 30px 30px 30px;
     overflow: auto;
+    z-index: 4;
   }
 
   .menu__body.active {
@@ -363,6 +376,13 @@ body {
 
   .main {
     margin-top: 75px;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer__mail-tooltip.active-tooltip {
+    font-size: 16px;
+    padding: 15px 10px;
   }
 }
 
