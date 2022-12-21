@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 	<link rel="shortcut icon" href="../img/favicon-32x32.png">
-	
+
 
 	<!-- Отключение формирования ссылки у номера телефона на iOS -->
 	<meta name="format-detection" content="telephone=no">
@@ -50,15 +50,16 @@
 
 
 	<!-- ШРИФТ -->
-	<link href="https://fonts.googleapis.com/css?family=Heebo:regular,500,700&_v=20221219183203" rel="stylesheet" &display=swap />
+	<link href="https://fonts.googleapis.com/css?family=Heebo:regular,500,700&display=swap&_v=20221221193517" rel="stylesheet" />
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20221219183203">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221221193517">
 	<title>Главная</title>
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="menu">
+		<div class="container">
+			<header class="menu">
 	<div class="menu__burger">
 		<span></span>
 	</div>
@@ -70,9 +71,24 @@
 		</div>
 	</nav>
 </header>
-		<main class="main">
-		</main>
-		<footer class="footer">
+			<main class="main">
+				<section class="main__about about">
+					<div class="about__logo">
+						<a href="https://vk.com/id318235090" rel="noopener" target="_blank">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" width="240" height="240" alt="Цифровизованная картинка меня"></picture>
+						</a>
+					</div>
+					<div class="about__info">
+						<h2 class="about__title">Hi, Я Ivan <br><span>Верстальщик</span></h2>
+						<p class="about__text">"Создаю качественные сайты с картинки" Правки и недочёты - БЕСПЛАТНЫЕ. Гарантия на последующую поддержку. Постоянное общение на счёт Вашего макета. Всегда на связи. Окончил курс HTML Academy.</p>
+						<a href="#" class="about-btn">
+							<span class="about-btn__text">Посмотреть работы</span>
+							<span class="about-btn__waves"></span>
+						</a>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
 	<div class="footer__link">
 		<a href="https://discordapp.com/users/339102420334280714/" target="_blank" rel="noopener" title="Discord">
 			<svg class="footer__img" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 64 64">
@@ -84,7 +100,7 @@
 		</a>
 	</div>
 	<div class="footer__link">
-		<a class=" footer__mail" href="mailto:ivan-kozlow04@mail.ru" target="_blank" rel="noopener" title="Почта">
+		<a class=" footer__mail" href="mailto:ivan-kozlow04@mail.ru&body=привет?subject=вопрос" target="_blank" rel="noopener" title="Почта">
 			<svg class="footer__img" xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60" viewBox="0 0 32 32">
 				<title>mail</title>
 				<path d="M24.581 12.331v-2.165l-8.581 5.373-8.581-5.373v2.165l8.581 5.293 8.581-5.293zM24.581 8c1.123 0 2.085 0.962 2.085 2.165v12.832c0 1.123-0.962 2.165-2.085 2.165h-17.163c-1.123 0-2.085-0.962-2.085-2.165v-12.832c0-1.123 0.962-2.165 2.085-2.165 0 0 17.163 0 17.163 0z"/>
@@ -106,8 +122,9 @@
 		</a>
 	</div>
 </footer>
+		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221219183203"></script>
+	<script src="js/app.min.js?_v=20221221193517"></script>
 </body>
 
 </html>
