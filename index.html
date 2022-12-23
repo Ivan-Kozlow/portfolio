@@ -50,9 +50,9 @@
 
 
 	<!-- ШРИФТ -->
-	<link href="https://fonts.googleapis.com/css?family=Heebo:regular,500,700&display=swap&_v=20221221193517" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Heebo:regular,500,700&display=swap&_v=20221223125102" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20221221193517">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221223125102">
 	<title>Главная</title>
 </head>
 
@@ -64,28 +64,53 @@
 		<span></span>
 	</div>
 	<nav class="menu__body">
-		<div class="menu__list">
-			<a href="#" class="menu__link menu__link-active">About</a>
-			<a href="#" class="menu__link">Works</a>
-			<a href="#" class="menu__link">Contacts</a>
-		</div>
+		<ul class="menu__list">
+			<li><a href="#" class="menu__link menu__link-opener">About</a></li>
+			<li>
+				<a href="works.html" class="menu__link">Works</a>
+				<span class="menu__arrow"></span>
+				<ul class="menu__sub-list">
+					<li>
+						<a class="menu__sub-link" href="https://ivan-kozlow.github.io/2116573-sedona-35/index.html" target="_blank">Sedona</a>
+					</li>
+				</ul>
+			</li>
+			<li><a href="#" class="menu__link">Contacts</a></li>
+		</ul>
 	</nav>
 </header>
 			<main class="main">
+				<h1 class="visually-hidden">Сайт-Портфолио</h1>
 				<section class="main__about about">
 					<div class="about__logo">
 						<a href="https://vk.com/id318235090" rel="noopener" target="_blank">
-							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" width="240" height="240" alt="Цифровизованная картинка меня"></picture>
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" width="256" height="256" alt="Цифровизованная картинка меня"></picture>
 						</a>
 					</div>
 					<div class="about__info">
-						<h2 class="about__title">Hi, Я Ivan <br><span>Верстальщик</span></h2>
-						<p class="about__text">"Создаю качественные сайты с картинки" Правки и недочёты - БЕСПЛАТНЫЕ. Гарантия на последующую поддержку. Постоянное общение на счёт Вашего макета. Всегда на связи. Окончил курс HTML Academy.</p>
-						<a href="#" class="about-btn">
+						<h2 class="about__title title">Hi, Я Ivan <br><span>Верстальщик</span></h2>
+						<p class="about__text">"Создаю качественные сайты с картинки" Правки и недочёты - БЕСПЛАТНЫЕ. Гарантия
+							на последующую поддержку. Постоянное общение на счёт Вашего макета. Всегда на связи. Окончил курс
+							HTML Academy.</p>
+						<a href="works.html" class="about-btn">
 							<span class="about-btn__text">Посмотреть работы</span>
 							<span class="about-btn__waves"></span>
 						</a>
 					</div>
+				</section>
+				<section class="main__works work">
+					<h2 class="work__title title">Работы</h2>
+
+					<article class="work__project">
+						<picture><source srcset="img/Sedona.webp" type="image/webp"><img src="img/Sedona.png" alt="Сайт Sedona"></picture>
+						<a class="work__link" href="https://ivan-kozlow.github.io/2116573-sedona-35/" target="_blank"><span class="work__subtitle">Sedona</span></a>
+					</article>
+
+					<article class="work__project">
+						<picture><source srcset="img/Peeps.webp" type="image/webp"><img src="img/Peeps.png" width="290" height="220" alt="Сайт Sedona"></picture>
+						<a class="work__link" href="https://ivan-kozlow.github.io/nft-peeps/" target="_blank"><span class="work__subtitle">NFT-Peeps</span></a>
+					</article>
+
 				</section>
 			</main>
 			<footer class="footer">
@@ -100,7 +125,7 @@
 		</a>
 	</div>
 	<div class="footer__link">
-		<a class=" footer__mail" href="mailto:ivan-kozlow04@mail.ru&body=привет?subject=вопрос" target="_blank" rel="noopener" title="Почта">
+		<a class=" footer__mail" href="mailto:ivan-kozlow04@mail.ru&body=привет?subject=С Портфолио" target="_blank" rel="noopener" title="Почта">
 			<svg class="footer__img" xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60" viewBox="0 0 32 32">
 				<title>mail</title>
 				<path d="M24.581 12.331v-2.165l-8.581 5.373-8.581-5.373v2.165l8.581 5.293 8.581-5.293zM24.581 8c1.123 0 2.085 0.962 2.085 2.165v12.832c0 1.123-0.962 2.165-2.085 2.165h-17.163c-1.123 0-2.085-0.962-2.085-2.165v-12.832c0-1.123 0.962-2.165 2.085-2.165 0 0 17.163 0 17.163 0z"/>
@@ -111,8 +136,7 @@
 	<div class="footer__link">
 		<a href="https://github.com/Ivan-Kozlow" target="_blank" rel="noopener" title="GitHab">
 			<svg class="footer__img" width="60" height="60" xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="438.549px"
-				height="438.549px" viewBox="0 0 438.549 438.549" style="enable-background:new 0 0 438.549 438.549;"
+				xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 438.549 438.549" style="enable-background:new 0 0 438.549 438.549;"
 				xml:space="preserve">
 				<g>
 					<path
@@ -124,7 +148,7 @@
 </footer>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221221193517"></script>
+	<script src="js/app.min.js?_v=20221223125102"></script>
 </body>
 
 </html>
