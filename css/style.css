@@ -91,6 +91,7 @@ h6 {
 
 .menu__list li {
   position: relative;
+  z-index: 3;
 }
 
 .menu__sub-list {
@@ -191,6 +192,7 @@ body._touch .menu__list li.active__arrow .menu__link {
 }
 
 body._touch .menu__list li.active__arrow .menu__sub-list {
+  z-index: 3;
   visibility: visible;
   opacity: 1;
   -webkit-transform: translate(0, 0);
@@ -207,6 +209,132 @@ body._touch .menu__list li.active__arrow .menu__arrow {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  top: 50px;
+}
+
+.page__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.page__pagination {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page__bullet {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  margin: 10px 0;
+  -webkit-transition: background-color 0.3s ease 0s;
+  -o-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.page__bullet-active {
+  background-color: #fff;
+}
+
+.page__scroll {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.page__drag-scroll {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.screen {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  position: relative;
+}
+
+.screen__content {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 100px 25px 25px 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.screen__body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.screen__title {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.screen__title-bg {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.screen__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.screen__image img {
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer {
@@ -391,20 +519,20 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   border-radius: 55% 8% 20px;
-  border-left: 1px solid white;
-  border-top: 2.5px solid white;
+  -webkit-box-shadow: -2px -1px 0 0 white;
+          box-shadow: -2px -1px 0 0 white;
   cursor: pointer;
-  -webkit-transition: border 0.1s ease 0s;
-  -o-transition: border 0.1s ease 0s;
-  transition: border 0.1s ease 0s;
+  -webkit-transition: all 0.4s ease-in 0s;
+  -o-transition: all 0.4s ease-in 0s;
+  transition: all 0.4s ease-in 0s;
   margin-right: 55px;
   position: relative;
 }
 
 .about__logo:hover,
 .about__logo:active {
-  border-left: 1px solid rgb(220, 220, 220);
-  border-top: 3px solid rgb(239, 239, 239);
+  -webkit-box-shadow: -2px 0 0 0 rgb(201, 201, 201), 0 -3px 0 0 white;
+          box-shadow: -2px 0 0 0 rgb(201, 201, 201), 0 -3px 0 0 white;
 }
 
 .about__logo img {
@@ -572,6 +700,7 @@ body {
           animation: waves 10s infinite linear;
 }
 
+.awards,
 .work {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -582,13 +711,15 @@ body {
   margin-bottom: 40px;
 }
 
+.awards__title,
 .work__title {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
 }
 
-.work__project {
+.awards__item,
+.work__item {
   min-width: 250px;
   height: 220px;
   -webkit-box-flex: 1;
@@ -606,23 +737,31 @@ body {
   overflow: hidden;
 }
 
-.work__project:hover {
+.awards__item:hover,
+.work__item:hover {
   -webkit-box-shadow: 0 0 15px 4px white;
           box-shadow: 0 0 15px 4px white;
 }
 
-.work__project:hover .work__subtitle {
+.awards__item:hover .awards__subtitle,
+.awards__item:hover .work__subtitle,
+.work__item:hover .awards__subtitle,
+.work__item:hover .work__subtitle {
   font-size: 0;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
-.work__project:hover .work__link {
+.awards__item:hover .awards__link,
+.awards__item:hover .work__link,
+.work__item:hover .awards__link,
+.work__item:hover .work__link {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.work__project img {
+.awards__item img,
+.work__item img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -632,6 +771,7 @@ body {
      object-fit: cover;
 }
 
+.awards__link,
 .work__link {
   position: absolute;
   width: 100%;
@@ -653,6 +793,7 @@ body {
   transition: all 0.5s ease-in-out 0s;
 }
 
+.awards__link:focus,
 .work__link:focus {
   -webkit-box-shadow: 0 0 35px 15px white;
           box-shadow: 0 0 35px 15px white;
@@ -662,6 +803,9 @@ body {
   transition: all 0.3s ease 0.2s;
 }
 
+.awards__link:focus .awards__subtitle,
+.awards__link:focus .work__subtitle,
+.work__link:focus .awards__subtitle,
 .work__link:focus .work__subtitle {
   font-size: 0;
   -webkit-transition: all 0.3s ease 0.2s;
@@ -669,12 +813,30 @@ body {
   transition: all 0.3s ease 0.2s;
 }
 
+.awards__subtitle,
 .work__subtitle {
   font-size: 24px;
   font-weight: 700;
+  text-align: center;
+  line-height: 1.6;
   color: rgb(231, 231, 231);
   letter-spacing: 4px;
   text-transform: uppercase;
+}
+
+.awards__item-yt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.awards__item-yt > .awards__link {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.awards__item-yt img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @-webkit-keyframes waves {
@@ -698,6 +860,12 @@ body {
   100% {
     -webkit-transform: translate3D(-50%, -96%, 0) rotate(360deg);
             transform: translate3D(-50%, -96%, 0) rotate(360deg);
+  }
+}
+
+@media (min-width: 767px) {
+  .page {
+    top: 70px;
   }
 }
 
@@ -923,10 +1091,17 @@ body {
   }
 }
 
+@media (max-width: 767) {
+  .screen__title {
+    font-size: 35px;
+  }
+}
+
 @media (max-width: 625px) {
   .about__logo {
-    border-right: 1px solid white;
     border-radius: 25% 25% 8% 20px;
+    -webkit-box-shadow: 0px -1px 0px 1px white;
+            box-shadow: 0px -1px 0px 1px white;
   }
 
   .about__logo img {
