@@ -50,9 +50,9 @@
 
 
 	<!-- ШРИФТ -->
-	<link href="https://fonts.googleapis.com/css?family=Heebo:regular,500,700&display=swap&_v=20230116193619" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo:regular,500,700&display=swap&_v=20230121151503" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20230116193619">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230121151503">
 	<title>Главная</title>
 </head>
 
@@ -79,7 +79,7 @@
 					</li>
 				</ul>
 			</li>
-			<li><a href="#" data-goto=".awards" style="display: none;" class="menu__link">Сertificates</a></li>
+			<li><a href="#" data-goto=".awards" style="display: none;" class="menu__link">Certificates</a></li>
 			<li><a href="#" data-goto=".footer" style="display: none;" class="menu__link">Contacts</a></li>
 		</ul>
 	</nav>
@@ -88,21 +88,33 @@
 			<div class="page__wrapper">
 
 				<div class="page__screen screen">
-					<div class="screen__content"></div>
+					<div class="screen__content">Инструменты: <span>html, css, js</span></div>
 					<div class="screen__body">
 						<a href="https://ivan-kozlow.github.io/2116573-sedona-35/index.html" target="_blank"
 							class="screen__image" data-swiper-parallax="33%">
-							<picture><source srcset="img/Sedona.webp" type="image/webp"><img src="img/Sedona.png" alt="Сайт Sedona" loading="lazy"></picture>
+							<picture>
+								<source srcset="img/Sedona.png" type="image/webp" media="(min-width: 767px)">
+								<source srcset="img/Sedona-mid.png" type="image/webp" media="(min-width: 634px)">
+								<source srcset="img/Sedona-min.png" type="image/webp" media="(min-width: 470px)">
+								<source srcset="img/Sedona-litl.png" type="image/webp" media="(max-width: 470px)">
+								<img src="img/Sedona.png" alt="Сайт Sedona" loading="lazy">
+							</picture>
 						</a>
 					</div>
 				</div>
 
 				<div class="page__screen screen">
-					<div class="screen__content"></div>
+					<div class="screen__content">Инструменты: <span>html, scss, js</span></div>
 					<div class="screen__body">
 						<a href="https://ivan-kozlow.github.io/nft-peeps/" target="_blank" class="screen__image"
 							data-swiper-parallax="33%">
-							<picture><source srcset="img/Peeps.webp" type="image/webp"><img src="img/Peeps.png" alt="Сайт NFT-Peeps" loading="lazy"></picture>
+							<picture>
+								<source srcset="img/Peeps.png" type="image/webp" media="(min-width: 767px)">
+								<source srcset="img/Peeps-mid.png" type="image/webp" media="(min-width: 634px)">
+								<source srcset="img/Peeps-min.png" type="image/webp" media="(min-width: 470px)">
+								<source srcset="img/Peeps-litl.png" type="image/webp" media="(max-width: 470px)">
+								<img src="img/Peeps.png" alt="Сайт NFT-Peeps" loading="lazy">
+							</picture>
 						</a>
 					</div>
 				</div>
@@ -111,8 +123,8 @@
 			<div class="page__scroll"></div>
 		</main>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20230116193619"></script>
-	<script src="js/app.min.js?_v=20230116193619"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20230121151503"></script>
+	<script src="js/app.min.js?_v=20230121151503"></script>
 </body>
 
 </html>
