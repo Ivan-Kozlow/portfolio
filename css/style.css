@@ -506,6 +506,9 @@ body {
 }
 
 .about__info {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   max-width: 580px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -723,7 +726,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 160px;
 }
 
 .awards__title,
@@ -837,6 +840,20 @@ body {
   color: rgb(231, 231, 231);
   letter-spacing: 4px;
   text-transform: uppercase;
+}
+
+.about__two {
+  margin-bottom: 160px;
+}
+
+.about__two-logo {
+  -webkit-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.awards {
+  margin-bottom: 50px;
 }
 
 .awards__item-yt {
