@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
+	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
@@ -50,16 +49,16 @@
 
 
 	<!-- ШРИФТ -->
-	<link href="https://fonts.googleapis.com/css?family=Heebo:regular,500,700&display=swap&subset=cyrillic-ext&_v=20230205100943" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo:regular,500,700&display=swap&subset=cyrillic-ext&_v=20230407170946" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20230205100943">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230407170946">
 	<title>Главная</title>
 </head>
 
-<body>
-	<div class="wrapper">
-		<div class="container">
-			<header class="menu">
+	<body>
+		<div class="wrapper">
+			<div class="container">
+				<header class="menu">
 	<div class="menu__burger">
 		<span></span>
 	</div>
@@ -85,95 +84,119 @@
 		</ul>
 	</nav>
 </header>
-			<main class="main">
-				<h1 class="visually-hidden">Сайт-Портфолио</h1>
-				<section class="main__about about">
-					<h2 class="visually-hidden">Общая информация</h2>
-					<div class="about__logo">
-						<a href="https://vk.com/id318235090" rel="noopener" target="_blank">
-							<img src="img/logo.png" width="256" height="256" alt="Цифровизованная картинка меня"
-								loading="lazy">
-						</a>
-					</div>
-					<div class="about__info">
-						<h2 class="about__title title">Hi, Я Ivan <br><span>Верстальщик</span></h2>
-						<p class="about__text">"Создаю качественные сайты с картинки" Правки и недочёты - БЕСПЛАТНЫЕ. Гарантия
-							на последующую поддержку. Постоянное общение на счёт Вашего макета. Всегда на связи. Окончил курс в
-							HTML Academy.</p>
-						<a href="works.html" class="about-btn">
-							<span class="about-btn__text">Посмотреть работы</span>
-							<span class="about-btn__waves"></span>
-						</a>
-					</div>
+				<main class="main">
+					<h1 class="visually-hidden">Сайт-Портфолио</h1>
+					<section class="main__about about">
+						<h2 class="visually-hidden">Общая информация</h2>
+						<div class="about__logo">
+							<a href="https://vk.com/id318235090" rel="noopener" target="_blank">
+								<img
+									src="img/logo.png"
+									width="256"
+									height="256"
+									alt="Цифровизованная картинка меня"
+									loading="lazy"
+								/>
+							</a>
+						</div>
+						<div class="about__info">
+							<h2 class="about__title title">Hi, Я Ivan <br /><span>Frontend Dev.</span></h2>
+							<p class="about__text">
+								"Создаю качественные сайты с картинки" <br />
+								Правки и недочёты - БЕСПЛАТНО. <br />
+								Поддержка после сдачи проекта. Постоянное общение на счёт Вашего сайта. Всегда на связи. <br />
+								Окончил курс в HTML Academy.
+							</p>
+							<a href="works.html" class="about-btn">
+								<span class="about-btn__text">Посмотреть работы</span>
+								<span class="about-btn__waves"></span>
+							</a>
+						</div>
+					</section>
+					<section class="main__works work">
+						<h2 class="work__title title">Работы</h2>
 
-				</section>
-				<section class="main__works work">
-					<h2 class="work__title title">Работы</h2>
+						<article class="work__item">
+							<picture><source srcset="img/Sedona.webp" type="image/webp"><img src="img/Sedona.png" alt="Сайт Sedona" /></picture>
+							<a class="work__link" href="https://ivan-kozlow.github.io/2116573-sedona-35/" target="_blank"
+								><span class="work__subtitle">Sedona</span></a
+							>
+						</article>
 
-					<article class="work__item">
-						<picture><source srcset="img/Sedona.webp" type="image/webp"><img src="img/Sedona.png" alt="Сайт Sedona"></picture>
-						<a class="work__link" href="https://ivan-kozlow.github.io/2116573-sedona-35/" target="_blank"><span
-								class="work__subtitle">Sedona</span></a>
-					</article>
+						<article class="work__item">
+							<picture><source srcset="img/Peeps.webp" type="image/webp"><img src="img/Peeps.png" width="290" height="220" alt="Сайт Sedona" /></picture>
+							<a class="work__link" href="https://ivan-kozlow.github.io/nft-peeps/" target="_blank"
+								><span class="work__subtitle">NFT-Peeps</span></a
+							>
+						</article>
 
-					<article class="work__item">
-						<picture><source srcset="img/Peeps.webp" type="image/webp"><img src="img/Peeps.png" width="290" height="220" alt="Сайт Sedona"></picture>
-						<a class="work__link" href="https://ivan-kozlow.github.io/nft-peeps/" target="_blank"><span
-								class="work__subtitle">NFT-Peeps</span></a>
-					</article>
+						<article class="work__item">
+							<picture><source srcset="img/React_Pizza.webp" type="image/webp"><img src="img/React_Pizza.png" width="290" height="220" alt="Сайт React Pizza" /></picture>
+							<a class="work__link" href="https://ivan-kozlow.github.io/Pizza_React/" target="_blank"
+								><span class="work__subtitle">React Pizza</span></a
+							>
+						</article>
+					</section>
 
-				</section>
+					<section class="main__about about about__two">
+						<div class="tech__info">
+							<h2 class="title tech__title"><span>🛠️</span> Технологии:</h2>
+							<dl class="tech__text">
+								<dt>HTML CSS/SCSS JS</dt>
+								<dt>Git GitHub</dt>
+								<dt>Prettier</dt>
+								<dt>Gulp</dt>
+								<dt>React (CSS-Modules, Hooks, Axios, Code Splitting, React Router v6)</dt>
+								<dt>Redux / Toolkit</dt>
+								<dt>TypeScript</dt>
+							</dl>
+						</div>
 
-				<section class="main__about about about__two">
-					<h2 class="work__title visually-hidden">Общая информация</h2>
-					<div class="about__info">
-						<p class="about__text">"Создаю качественные сайты с картинки" Правки и недочёты - БЕСПЛАТНЫЕ. Гарантия
-							на последующую поддержку. Постоянное общение на счёт Вашего макета. Всегда на связи. Окончил курс в
-							HTML Academy.</p>
-						<a href="works.html" class="about-btn">
-							<span class="about-btn__text">Посмотреть работы</span>
-							<span class="about-btn__waves"></span>
-						</a>
-					</div>
+						<div class="about__logo about__two-logo">
+							<a href="https://vk.com/id318235090" rel="noopener" target="_blank">
+								<img
+									src="img/love.png"
+									width="256"
+									height="256"
+									alt="Цифровизованная картинка меня"
+									loading="lazy"
+								/>
+							</a>
+						</div>
+					</section>
 
-					<div class="about__logo about__two-logo">
-						<a href="https://vk.com/id318235090" rel="noopener" target="_blank">
-							<img src="img/love.png" width="256" height="256" alt="Цифровизованная картинка меня"
-								loading="lazy">
-						</a>
-					</div>
-				</section>
-
-				<section class="menu__awards awards">
-					<h2 class="awards__title title">Сертификаты</h2>
-
-					<article class="awards__item">
-						<picture><source srcset="img/awards/htmlAcademy.webp" type="image/webp"><img src="img/awards/htmlAcademy.png" width="390" height="420" alt="Сертификат HTML-Academy"></picture>
-						<a class="awards__link" href="img/awards/htmlAcademy.png" target="_blank"><span
-								class="awards__subtitle">Вёрстка</span></a>
-					</article>
-
-					<article class="awards__item">
-						<picture><source srcset="img/awards/gitGB.webp" type="image/webp"><img src="img/awards/gitGB.png" width="390" height="420" alt="Сертификат GeekBrains Git"></picture>
-						<a class="awards__link" href="img/awards/gitGB.png" target="_blank"><span
-								class="awards__subtitle">Git</span></a>
-					</article>
-
-					<article class="awards__item">
-						<picture><source srcset="img/awards/webGB.webp" type="image/webp"><img src="img/awards/webGB.png" width="390" height="420" alt="Сертификат GeekBrains Git"></picture>
-						<a class="awards__link" href="img/awards/webGB.png" target="_blank"><span
-								class="awards__subtitle">Web</span></a>
-					</article>
-
-					<article class="awards__item awards__item-yt">
-						<picture><source srcset="img/confused.webp" type="image/webp"><img src="img/confused.png" width="390" height="420" alt="Сертификат GeekBrains Git"></picture>
-						<a class="awards__link" href="https://youtube.com/playlist?list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr"
-							target="_blank"><span class="awards__subtitle">Плэйлист с Ютуба</span></a>
-					</article>
-
-				</section>
-			</main>
-			<footer class="footer">
+					<section class="menu__awards awards">
+						<h2 class="awards__title title">Сертификаты</h2>
+						<article class="awards__item">
+							<picture><source srcset="img/awards/htmlAcademy.webp" type="image/webp"><img src="img/awards/htmlAcademy.png" width="390" height="420" alt="Сертификат HTML-Academy" /></picture>
+							<a class="awards__link" href="img/awards/htmlAcademy.png" target="_blank"
+								><span class="awards__subtitle">Вёрстка</span></a
+							>
+						</article>
+						<article class="awards__item">
+							<picture><source srcset="img/awards/gitGB.webp" type="image/webp"><img src="img/awards/gitGB.png" width="390" height="420" alt="Сертификат GeekBrains Git" /></picture>
+							<a class="awards__link" href="img/awards/gitGB.png" target="_blank"
+								><span class="awards__subtitle">Git</span></a
+							>
+						</article>
+						<article class="awards__item">
+							<picture><source srcset="img/awards/webGB.webp" type="image/webp"><img src="img/awards/webGB.png" width="390" height="420" alt="Сертификат GeekBrains Git" /></picture>
+							<a class="awards__link" href="img/awards/webGB.png" target="_blank"
+								><span class="awards__subtitle">Web</span></a
+							>
+						</article>
+						<article class="awards__item awards__item-yt">
+							<picture><source srcset="img/confused.webp" type="image/webp"><img src="img/confused.png" width="390" height="420" alt="Сертификат GeekBrains Git" /></picture>
+							<a
+								class="awards__link"
+								href="https://youtube.com/playlist?list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr"
+								target="_blank"
+								><span class="awards__subtitle">Плэйлист с Ютуба</span></a
+							>
+						</article>
+					</section>
+				</main>
+				<footer class="footer">
 	<h2 class="footer__title title">Контакты</h2>
 	<div class="footer__link">
 		<a href="https://discordapp.com/users/339102420334280714/" target="_blank" rel="noopener" title="Discord">
@@ -210,9 +233,8 @@
 		</a>
 	</div>
 </footer>
+			</div>
 		</div>
-	</div>
-	<script src="js/app.min.js?_v=20230205100943"></script>
-</body>
-
+		<script src="js/app.min.js?_v=20230407170946"></script>
+	</body>
 </html>
